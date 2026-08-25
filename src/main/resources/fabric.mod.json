@@ -10,7 +10,7 @@
 	"contact": {
 		"sources": "https://github.com/QuincyZhang03/mc-ms-better-colortool"
 	},
-	"license": "CC0",
+	"license": "MIT License",
 	"icon": "assets/msbettercolortool/icon.png",
 	"environment": "*",
 	"entrypoints": {
