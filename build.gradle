@@ -52,7 +52,7 @@ jar {
 }
 
 remapJar{
-	archiveFileName="${mod_id}-${minecraft_version}-v${version}.jar"
+	archiveFileName="${mod_id}-${minecraft_version}-${version}.jar"
 }
 
 // configure the maven publication
