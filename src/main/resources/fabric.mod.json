@@ -1,0 +1,30 @@
+{
+	"schemaVersion": 1,
+	"id": "msbettercolortool",
+	"version": "${version}",
+	"name": "Mishanguc: Better Colortool",
+	"description": "A Refinement on the Color Tool in Mishang Urban Construction.",
+	"authors": [
+		"SummerQuincy"
+	],
+	"contact": {
+		"sources": "https://github.com/QuincyZhang03/mc-ms-better-colortool"
+	},
+	"license": "CC0",
+	"icon": "assets/msbettercolortool/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.summerquincy.mc.msbettercolortool.MishangucBetterColortool"
+		]
+	},
+	"mixins": [
+	],
+	"depends": {
+		"fabricloader": "*",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*",
+		"mishanguc": ">=1.5.0"
+	}
+}

@@ -1,0 +1,5 @@
+{
+  "message.msbettercolortool.invalid": "Invalid argument. Needs hex value.",
+  "message.msbettercolortool.success": "Successfully!",
+  "message.msbettercolortool.wrong_item": "Not correct item in hand. Needs Color Tool."
+}

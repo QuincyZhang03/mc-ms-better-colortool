@@ -1,0 +1,5 @@
+{
+  "message.msbettercolortool.invalid": "无效的参数，需要十六进制RGB值。",
+  "message.msbettercolortool.success": "设置颜色成功!",
+  "message.msbettercolortool.wrong_item": "手中的物品不正确，需要迷上城建的颜色工具。"
+}
