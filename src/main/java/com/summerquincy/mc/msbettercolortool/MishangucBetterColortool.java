@@ -14,6 +14,7 @@ import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 
 public class MishangucBetterColortool implements ModInitializer {
+    @SuppressWarnings("unused")
     public static final String MOD_ID = "msbettercolortool";
 
 //    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
@@ -46,10 +47,5 @@ public class MishangucBetterColortool implements ModInitializer {
                                     return 0;
                                 }
                         ))));
-    }
-
-    @SuppressWarnings("unused")
-    public static Identifier id(String path) {
-        return new Identifier(MOD_ID, path);
     }
 }
