@@ -3,7 +3,6 @@ package com.summerquincy.mc.msbettercolortool;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
-import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.minecraft.ChatFormatting;
 import net.minecraft.commands.Commands;
 import net.minecraft.core.component.DataComponentType;
@@ -12,7 +11,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +18,7 @@ import org.slf4j.LoggerFactory;
 public class MishangucBetterColortool implements ModInitializer {
     @SuppressWarnings("unused")
     public static final String MOD_ID = "msbettercolortool";
-
+    @SuppressWarnings("unused")
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
     @SuppressWarnings("unchecked")
@@ -57,21 +55,5 @@ public class MishangucBetterColortool implements ModInitializer {
                                     return 0;
                                 }
                         ))));
-        //Fix 1.21.1 neoforge creative tool problem
-        PlayerBlockBreakEvents.BEFORE.register((world, player, pos, state, blockEntity) -> {
-            if (world.isClientSide()) return false;
-            if (player.isCreative()) {
-                Item item = player.getMainHandItem().getItem();
-                try {
-                    Class<?> mishangToolClass = Class.forName("pers.solid.mishang.uc.item.BlockToolItem");
-                    if (mishangToolClass.isInstance(item)) {
-                        return false;
-                    }
-                } catch (ClassNotFoundException e) {
-                    LOGGER.warn("Mishang Tool Class not found.");
-                }
-            }
-            return true;
-        });
     }
 }
